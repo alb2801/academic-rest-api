@@ -1,0 +1,20 @@
+{
+    "db-connections": {
+        "mongodb": {
+            "host": "cluster0.sanvo.mongodb.net",
+            "user": "acad_rest_api_user",
+            "password": "6mibOhUU7hzefm0Y",
+            "dbname": "AcademicDB"
+        }
+    },
+    "secretkeys": {
+        "cryptojs": "K5U4Rr6y6T",
+        "jwt": "ABC@2020*"
+    },
+    "roles": {
+        "student": 1,
+        "teacher": 2
+    },
+    "server-port": 3000,
+    "sesionTime": 3600
+}
