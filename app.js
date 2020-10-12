@@ -45,6 +45,14 @@ periodRoutes(app);
 const courseRoutes = require("./routes/course.route");
 courseRoutes(app);
 
+// faculty routes loading
+const facultyRoutes = require("./routes/faculty.route");
+facultyRoutes(app);
+
+// program routes loading
+const programRoutes = require("./routes/program.route");
+programRoutes(app);
+
 
 app.listen(port, () => {
     console.log("Server is runnig...");

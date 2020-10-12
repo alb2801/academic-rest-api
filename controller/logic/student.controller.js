@@ -14,7 +14,7 @@ exports.createStudent = (req, res, next) => {
         lastname: req.body.lastname,
         email: req.body.email,
         phone: req.body.phone,
-        career: req.body.career
+        career: req.body.careerId
     };
     studentDto.create(std, (err, data) => {
         if (err) {
