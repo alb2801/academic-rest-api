@@ -34,30 +34,30 @@ exports.createProgram = (req, res, next) => {
 };
 
 exports.updateProgram = (req, res, next) => {
-    facultyDto.getByCode({ code: req.body.codeFa }, (err, u) => {
-        let prg = {
-            code: req.body.code,
-            name: req.body.name,
-            nameDirec: req.body.nameDirec,
-            idFacul: u[0]._id
-        };
+    //facultyDto.getByCode({ code: req.body.codeFa }, (err, u) => {
+    let prg = {
+        code: req.body.code,
+        name: req.body.name,
+        nameDirec: req.body.nameDirec,
+        idFacul: u[0]._id
+    };
 
-        programDto.update({ _id: req.body.id }, prg, (err, data) => {
-            if (err) {
-                return res.status(400).json(
-                    {
-                        error: err
-                    }
-                );
-            }
-
-            res.status(201).json(
+    programDto.update({ _id: req.body.id }, prg, (err, data) => {
+        if (err) {
+            return res.status(400).json(
                 {
-                    info: data
+                    error: err
                 }
             );
-        });
+        }
+
+        res.status(201).json(
+            {
+                info: data
+            }
+        );
     });
+    //});
 };
 
 exports.getAll = (req, res, next) => {
